@@ -1,4 +1,4 @@
-# AI-Enhanced Electronics Rental Platform (RentTech)
+#RentTech| AI-Enhanced Electronics Rental Platform 
 
 ## Abstract
 This project proposes the development of a platform for renting electronic devices at affordable rates for predefined timeframes.  
