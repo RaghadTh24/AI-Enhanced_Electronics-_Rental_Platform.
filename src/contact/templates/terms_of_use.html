@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<!-- Start Hero Area -->
+<section class="hero-area overlay">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+        <div class="hero-text text-center">
+          <div class="section-heading">
+            <h2 class="wow fadeInUp" data-wow-delay=".3s">{% trans "Welcome to RentTech" %}</h2>
+            <p class="wow fadeInUp" data-wow-delay=".5s">
+              {% trans "Smart Electronic Device Rental Platform" %}<br>
+              {% trans "Rent the devices you need easily at the best prices." %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Hero Area -->
+
+<!-- Start Items Grid Area -->
+<section class="items-grid section custom-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2 class="wow fadeInUp" data-wow-delay=".4s">{% trans "Terms of Use" %}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="content" style="margin-top: 30px; line-height: 2; color:black;">
+      <h4>{% trans "1. Acceptance of the terms" %}</h4>
+      <p>{% trans "By using this site, you agree to be bound by all of these Terms of Use and any amendments thereto. If you do not agree to any of the terms, you may not use the site." %}</p>
+
+      <h4>{% trans "2. Amendments to the Terms" %}</h4>
+      <p>{% trans "We may modify these Terms at any time. Modifications will be posted on this page, and you should review the Terms periodically. Your continued use of the Site following any such modifications means you accept those changes." %}</p>
+
+      <h4>{% trans "3. Device Rental Terms" %}</h4>
+      <p>{% trans "Users must pay the applicable fees on time to use the rented devices. The rental period is determined during the checkout process, and may be extended based on device availability." %}</p>
+
+      <h4>{% trans "4. Responsibility for rented equipment" %}</h4>
+      <p>{% trans "The user bears full responsibility for the rented devices during the rental period. In the event of loss or damage to any device, the user is obligated to pay compensation based on the actual value of the device." %}</p>
+
+      <h4>{% trans "5. Maintenance and Warranty" %}</h4>
+      <p>{% trans "The company guarantees that the rented equipment is in good condition. However, if any technical malfunction occurs during the rental period, the equipment will be repaired or replaced according to the terms specified in the rental contract." %}</p>
+
+      <h4>{% trans "6. Permitted Use" %}</h4>
+      <p>{% trans "You must use the Site for lawful purposes only. You are prohibited from using the Site for any illegal activity or activity that violates any laws or regulations." %}</p>
+
+      <h4>{% trans "7. Intellectual Property Rights" %}</h4>
+      <p>{% trans "All content available on the Site, including text, images, and software, is the exclusive property of the Site or its authorized users. You may not copy, distribute, or reproduce any of the content without permission." %}</p>
+
+      <h4>{% trans "8. Responsibility" %}</h4>
+      <p>{% trans "The Site is not liable for any damages that may occur as a result of your use of, or inability to use, the Site. The content is provided \"as is\" and without any warranties." %}</p>
+
+      <h4>{% trans "9. Applicable laws" %}</h4>
+      <p>{% trans "These Terms are governed by the local laws of our country. Any dispute arising from this Agreement shall be resolved in accordance with these laws." %}</p>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

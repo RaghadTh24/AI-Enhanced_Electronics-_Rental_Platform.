@@ -1,0 +1,72 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% trans "Order Summary - RentTech" %}</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .summary-card {
+      max-width: 600px;
+      margin: 40px auto;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      padding: 30px;
+      background-color: #fffaf5;
+    }
+    .summary-image img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+    .btn-brown {
+      background-color: #5e4633;
+      color: white;
+    }
+    .btn-brown:hover {
+      background-color: #4d3a28;
+      color: white;
+    }
+    .text-brown {
+      color: #5e4633;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="summary-card shadow">
+      <h2 class="text-center text-brown mb-4">{% trans "Order Confirmed ✅" %}</h2>
+      <div class="summary-image mb-4">
+        <img src="{{ rental.device.image.url }}" alt="{% trans 'Device Image' %}">
+      </div>
+      <h4 class="text-center mb-3">{{ rental.device.name }}</h4>
+      <ul class="list-group list-group-flush mb-4">
+        <li class="list-group-item">{% trans "Rating" %}: <span>{{ rental.device.rating|default:"N/A" }}</span> ⭐</li>
+        <li class="list-group-item">{% trans "Availability" %}: 
+          <span>
+            {% if rental.device.is_available %}
+              {% trans "Available" %}
+            {% else %}
+              {% trans "Unavailable" %}
+            {% endif %}
+          </span>
+        </li>
+        <li class="list-group-item">{% trans "Days Rented" %}: <span>{{ rental.duration }}</span> {% trans "day(s)" %}</li>
+        <li class="list-group-item">{% trans "Total Price" %}: <span>{{ rental.total_price }}</span> {% trans "SAR" %}</li>
+        <li class="list-group-item">{% trans "Payment Method" %}: <span>{{ rental.payment_method }}</span></li>
+        <li class="list-group-item">{% trans "Location" %}: 
+          <span>{{ rental.location_lat }}, {{ rental.location_lng }}</span>
+        </li>
+      </ul>
+      <div class="text-center">
+        <a href="{% url 'rentals:home' %}" class="btn btn-brown px-5 py-2">{% trans "Back to Home" %}</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

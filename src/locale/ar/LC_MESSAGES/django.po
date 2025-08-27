@@ -1,0 +1,1207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-14 02:38+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\accounts\templates\profile\edit_profile.html:8
+msgid "RentTech - Edit Profile"
+msgstr "RentTech - تعديل الملف الشخصي"
+
+#: .\accounts\templates\profile\edit_profile.html:14
+msgid "Edit Profile"
+msgstr "تعديل الملف الشخصي"
+
+#: .\accounts\templates\profile\edit_profile.html:20
+#: .\accounts\templates\regester\register.html:19
+msgid "Username"
+msgstr "اسم المستخدم"
+
+#: .\accounts\templates\profile\edit_profile.html:25
+#: .\accounts\templates\regester\register.html:24
+msgid "First Name"
+msgstr "الاسم الأول"
+
+#: .\accounts\templates\profile\edit_profile.html:30
+#: .\accounts\templates\regester\register.html:29
+msgid "Last Name"
+msgstr "اسم العائلة"
+
+#: .\accounts\templates\profile\edit_profile.html:35
+#: .\accounts\templates\regester\register.html:34
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: .\accounts\templates\profile\edit_profile.html:40
+#: .\accounts\templates\regester\register.html:39
+msgid "Phone Number"
+msgstr "رقم الجوال"
+
+#: .\accounts\templates\profile\edit_profile.html:45
+#: .\accounts\templates\regester\register.html:44
+msgid "ID Type"
+msgstr "نوع الهوية"
+
+#: .\accounts\templates\profile\edit_profile.html:50
+#: .\accounts\templates\regester\register.html:49
+msgid "ID Number"
+msgstr "رقم الهوية"
+
+#: .\accounts\templates\profile\edit_profile.html:55
+#: .\accounts\templates\regester\register.html:64
+msgid "Gender"
+msgstr "الجنس"
+
+#: .\accounts\templates\profile\edit_profile.html:61
+msgid "Save Changes"
+msgstr "حفظ التعديلات"
+
+#: .\accounts\templates\profile\profile.html:8
+msgid "RentTech - Profile"
+msgstr "RentTech - الملف الشخصي"
+
+#: .\accounts\templates\profile\profile.html:18
+#: .\rentals\templates\category_devices.html:22
+#: .\rentals\templates\search_results.html:22 .\templates\base.html:35
+msgid "Home"
+msgstr "الرئيسية"
+
+#: .\accounts\templates\profile\profile.html:19
+#: .\rentals\templates\category_devices.html:25
+#: .\rentals\templates\search_results.html:25 .\templates\base.html:38
+msgid "Products"
+msgstr "المنتجات"
+
+#: .\accounts\templates\profile\profile.html:29
+msgid "Full Name:"
+msgstr "الاسم الكامل:"
+
+#: .\accounts\templates\profile\profile.html:33
+msgid "Username:"
+msgstr "اسم المستخدم:"
+
+#: .\accounts\templates\profile\profile.html:37
+#: .\dashboard\templates\management\UsersManagement.html:67
+msgid "Email:"
+msgstr "البريد الإلكتروني:"
+
+#: .\accounts\templates\profile\profile.html:41
+msgid "Phone Number:"
+msgstr "رقم الجوال:"
+
+#: .\accounts\templates\profile\profile.html:45
+msgid "ID Type:"
+msgstr "نوع الهوية:"
+
+#: .\accounts\templates\profile\profile.html:49
+msgid "ID Number:"
+msgstr "رقم الهوية:"
+
+#: .\accounts\templates\profile\profile.html:56
+msgid "Edit"
+msgstr "تعديل"
+
+#: .\accounts\templates\regester\login.html:8
+#: .\accounts\templates\regester\login.html:34
+#: .\accounts\templates\regester\login.html:55
+#: .\rentals\templates\category_devices.html:32
+#: .\rentals\templates\category_devices.html:80
+#: .\rentals\templates\search_results.html:82 .\templates\base.html:64
+#: .\templates\base.html:112
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: .\accounts\templates\regester\login.html:45
+msgid "User, Email or National ID"
+msgstr "اسم المستخدم, البريد الالكتروني, الهوية"
+
+#: .\accounts\templates\regester\login.html:50
+msgid "Enter Your Password"
+msgstr "ادخل كلمة المرور"
+
+#: .\accounts\templates\regester\login.html:59
+msgid "Not a member?"
+msgstr "لا تملك حساب؟"
+
+#: .\accounts\templates\regester\login.html:59
+msgid "Signup now"
+msgstr "سجل الان"
+
+#: .\accounts\templates\regester\register.html:7
+msgid "RentTech - Registration"
+msgstr "التسجيل - RentTech"
+
+#: .\accounts\templates\regester\register.html:13
+msgid "Registration"
+msgstr "التسجيل"
+
+#: .\accounts\templates\regester\register.html:54
+msgid "Password"
+msgstr "كلمة المرور"
+
+#: .\accounts\templates\regester\register.html:59
+msgid "Confirm Password"
+msgstr "تأكيد كلمة المرور"
+
+#: .\accounts\templates\regester\register.html:69
+msgid "Role"
+msgstr "نوع المستخدم"
+
+#: .\accounts\templates\regester\register.html:75
+#: .\rentals\templates\category_devices.html:33 .\templates\base.html:67
+msgid "Register"
+msgstr "تسجيل"
+
+#: .\chatbot\templates\chatbot\chatbot.html:9
+msgid "Chatbot - RentTech"
+msgstr "ال"
+
+#: .\chatbot\templates\chatbot\chatbot.html:157
+msgid "Back"
+msgstr "العودة"
+
+#: .\chatbot\templates\chatbot\chatbot.html:162
+msgid "RentTech Chatbot"
+msgstr "يي"
+
+#: .\chatbot\templates\chatbot\chatbot.html:164
+msgid "Welcome to RENTTECH! How can I assist you today?"
+msgstr "مرحبا بك في RentTech كيف يمكنني مساعدتك؟"
+
+#: .\chatbot\templates\chatbot\chatbot.html:168
+msgid "Type your message..."
+msgstr "اكتب رسالتك"
+
+#: .\chatbot\templates\chatbot\chatbot.html:169
+msgid "Send"
+msgstr "ارسال"
+
+#: .\contact\templates\contact_us.html:14
+#: .\contact\templates\privacy_policy.html:13
+#: .\contact\templates\terms_of_use.html:13
+#: .\dashboard\templates\buyer\Buyer.html:14
+#: .\dashboard\templates\management\Manager.html:14
+#: .\dashboard\templates\seller\Seller.html:17 .\rentals\templates\home.html:13
+#: .\rentals\templates\products.html:17
+msgid "Welcome to RentTech"
+msgstr "مرحبًا بك في RentTech"
+
+#: .\contact\templates\contact_us.html:15
+#: .\contact\templates\privacy_policy.html:15
+#: .\contact\templates\terms_of_use.html:15
+#: .\dashboard\templates\buyer\Buyer.html:16 .\rentals\templates\home.html:14
+#: .\rentals\templates\products.html:19
+msgid "Smart Electronic Device Rental Platform"
+msgstr "منصة ذكية لتأجير الأجهزة الإلكترونية"
+
+#: .\contact\templates\contact_us.html:15
+#: .\contact\templates\privacy_policy.html:16
+#: .\contact\templates\terms_of_use.html:16
+#: .\dashboard\templates\buyer\Buyer.html:18 .\rentals\templates\home.html:14
+#: .\rentals\templates\products.html:20
+msgid "Rent the devices you need easily at the best prices."
+msgstr "استأجر الأجهزة التي تحتاجها بسهولة وبأفضل الأسعار."
+
+#: .\contact\templates\contact_us.html:30
+#: .\contact\templates\privacy_policy.html:55
+#: .\rentals\templates\category_devices.html:28
+#: .\rentals\templates\search_results.html:28 .\templates\base.html:41
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
+#: .\contact\templates\contact_us.html:42
+msgid "Mail"
+msgstr "البريد الالكتروني"
+
+#: .\contact\templates\contact_us.html:44
+msgid "Mail Us"
+msgstr "راسلنا"
+
+#: .\contact\templates\contact_us.html:53
+#: .\contact\templates\contact_us.html:55
+msgid "Telephone"
+msgstr "الهاتف"
+
+#: .\contact\templates\contact_us.html:71
+msgid "Send Your Message"
+msgstr "أرسل رسالتك"
+
+#: .\contact\templates\contact_us.html:83
+#: .\contact\templates\contact_us.html:84
+msgid "Your Name"
+msgstr "اسمك"
+
+#: .\contact\templates\contact_us.html:90
+#: .\contact\templates\contact_us.html:91
+msgid "Your Email"
+msgstr "بريدك الإلكتروني"
+
+#: .\contact\templates\contact_us.html:97
+msgid "Phone"
+msgstr "الجوال"
+
+#: .\contact\templates\contact_us.html:98
+msgid "Your Phone"
+msgstr "رقم الجوال"
+
+#: .\contact\templates\contact_us.html:104
+#: .\contact\templates\contact_us.html:105
+msgid "Subject"
+msgstr "الموضوع"
+
+#: .\contact\templates\contact_us.html:111
+msgid "Leave a message here"
+msgstr "اترك رسالتك هنا"
+
+#: .\contact\templates\contact_us.html:112
+msgid "Message"
+msgstr "الرسالة"
+
+#: .\contact\templates\contact_us.html:117
+msgid "Send Message"
+msgstr "إرسال الرسالة"
+
+#: .\contact\templates\privacy_policy.html:32
+#: .\rentals\templates\category_devices.html:90
+#: .\rentals\templates\search_results.html:94 .\templates\base.html:138
+msgid "Privacy Policy"
+msgstr "سياسة الخصوصية"
+
+#: .\contact\templates\privacy_policy.html:37
+msgid "Information We Collect"
+msgstr "ال"
+
+#: .\contact\templates\privacy_policy.html:38
+msgid ""
+"We may collect personal information such as your name, email address, "
+"contact number, and payment details when you register or make a transaction."
+msgstr "ال"
+
+#: .\contact\templates\privacy_policy.html:40
+msgid "How We Use Your Information"
+msgstr "ال"
+
+#: .\contact\templates\privacy_policy.html:41
+msgid "ال"
+"Your information is used to provide and improve our services, process "
+"transactions, and communicate with you regarding updates or promotional "
+"content."
+msgstr "ال"
+
+#: .\contact\templates\privacy_policy.html:43
+msgid "Data Security"
+msgstr "ال"
+
+#: .\contact\templates\privacy_policy.html:44
+msgid ""
+"We implement a variety of security measures to maintain the safety of your "
+"personal information."
+msgstr "ال"
+
+#: .\contact\templates\privacy_policy.html:46
+msgid "Cookies"
+msgstr "ال"
+
+#: .\contact\templates\privacy_policy.html:47
+msgid ""
+"We use cookies to personalize your experience and analyze website traffic. "
+"You can choose to disable cookies through your browser settings."
+msgstr "ال"
+
+#: .\contact\templates\privacy_policy.html:49
+msgid "Third-Party Sharing"
+msgstr "ال"
+
+#: .\contact\templates\privacy_policy.html:50
+msgid ""
+"We do not sell, trade, or otherwise transfer your personal information to "
+"outside parties without your consent, except when necessary to fulfill our "
+"services."
+msgstr "ال"
+
+#: .\contact\templates\privacy_policy.html:52
+msgid "Your Rights"
+msgstr "ال"
+
+#: .\contact\templates\privacy_policy.html:53
+msgid ""
+"You have the right to access, correct, or delete your personal data. You can "
+"contact us to exercise any of these rights."
+msgstr "ال"
+
+#: .\contact\templates\privacy_policy.html:56
+msgid ""
+"If you have any questions about this Privacy Policy, you can contact us at "
+"support@renttech.com."
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:32
+#: .\rentals\templates\category_devices.html:89
+#: .\rentals\templates\search_results.html:93 .\templates\base.html:137
+msgid "Terms of Use"
+msgstr "شروط الاستخدام"
+
+#: .\contact\templates\terms_of_use.html:37
+msgid "1. Acceptance of the terms"
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:38
+msgid ""
+"By using this site, you agree to be bound by all of these Terms of Use and "
+"any amendments thereto. If you do not agree to any of the terms, you may not "
+"use the site."
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:40
+msgid "2. Amendments to the Terms"
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:41
+msgid ""
+"We may modify these Terms at any time. Modifications will be posted on this "
+"page, and you should review the Terms periodically. Your continued use of "
+"the Site following any such modifications means you accept those changes."
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:43
+msgid "3. Device Rental Terms"
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:44
+msgid ""
+"Users must pay the applicable fees on time to use the rented devices. The "
+"rental period is determined during the checkout process, and may be extended "
+"based on device availability."
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:46
+msgid "4. Responsibility for rented equipment"
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:47
+msgid ""
+"The user bears full responsibility for the rented devices during the rental "
+"period. In the event of loss or damage to any device, the user is obligated "
+"to pay compensation based on the actual value of the device."
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:49
+msgid "5. Maintenance and Warranty"
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:50
+msgid ""
+"The company guarantees that the rented equipment is in good condition. "
+"However, if any technical malfunction occurs during the rental period, the "
+"equipment will be repaired or replaced according to the terms specified in "
+"the rental contract."
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:52
+msgid "6. Permitted Use"
+msgstr ""
+
+#: .\contact\templates\terms_of_use.html:53
+msgid ""
+"You must use the Site for lawful purposes only. You are prohibited from "
+"using the Site for any illegal activity or activity that violates any laws "
+"or regulations."
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:55
+msgid "7. Intellectual Property Rights"
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:56
+msgid ""
+"All content available on the Site, including text, images, and software, is "
+"the exclusive property of the Site or its authorized users. You may not "
+"copy, distribute, or reproduce any of the content without permission."
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:58
+msgid "8. Responsibility"
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:59
+msgid ""
+"The Site is not liable for any damages that may occur as a result of your "
+"use of, or inability to use, the Site. The content is provided \\"
+msgstr ""
+
+#: .\contact\templates\terms_of_use.html:61
+msgid "9. Applicable laws"
+msgstr "ال"
+
+#: .\contact\templates\terms_of_use.html:62
+msgid ""
+"These Terms are governed by the local laws of our country. Any dispute "
+"arising from this Agreement shall be resolved in accordance with these laws."
+msgstr "ال"
+
+#: .\dashboard\templates\buyer\Buyer.html:34
+#: .\dashboard\templates\management\Manager.html:32
+#: .\dashboard\templates\seller\Seller.html:35
+msgid "Your Service"
+msgstr "خدماتك"
+
+#: .\dashboard\templates\buyer\Buyer.html:47
+#: .\dashboard\templates\seller\Seller.html:47
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: .\dashboard\templates\buyer\Buyer.html:49
+#: .\dashboard\templates\seller\Seller.html:49
+msgid "My Profile"
+msgstr "ملفي الشخصي"
+
+#: .\dashboard\templates\buyer\Buyer.html:59
+msgid "Rental"
+msgstr "ال"
+
+#: .\dashboard\templates\buyer\Buyer.html:61
+msgid "My Rental"
+msgstr "إيجاراتي"
+
+#: .\dashboard\templates\buyer\Buyer.html:71
+#: .\dashboard\templates\seller\Seller.html:71
+msgid "Chatbot"
+msgstr "ال"
+
+#: .\dashboard\templates\buyer\Buyer.html:73
+#: .\dashboard\templates\seller\Seller.html:73
+msgid "Communicate with chatbot"
+msgstr "التواصل مع روبوت المحادثة"
+
+#: .\dashboard\templates\buyer\devices_buyer.html:8
+msgid "My Rentals"
+msgstr "ال"
+
+#: .\dashboard\templates\buyer\devices_buyer.html:45
+msgid "Devices You Rented"
+msgstr "الاجهزة التي استأجرتها"
+
+#: .\dashboard\templates\buyer\devices_buyer.html:55
+#: .\rentals\templates\similar_devices.html:28
+msgid "From"
+msgstr "من"
+
+#: .\dashboard\templates\buyer\devices_buyer.html:55
+msgid "to"
+msgstr "الى"
+
+#: .\dashboard\templates\buyer\devices_buyer.html:57
+#: .\rentals\templates\order_summary.html:49
+msgid "Rating"
+msgstr "تقييم"
+
+#: .\dashboard\templates\buyer\devices_buyer.html:62
+msgid "Mark as Returned"
+msgstr "علامة على الارجاع"
+
+#: .\dashboard\templates\buyer\devices_buyer.html:64
+msgid "Waiting for seller confirmation"
+msgstr "انتظر تأكيد البائع"
+
+#: .\dashboard\templates\buyer\devices_buyer.html:66
+msgid "Returned"
+msgstr "تم الارجاع"
+
+#: .\dashboard\templates\buyer\devices_buyer.html:68
+msgid "Rejected"
+msgstr "مرفوض"
+
+#: .\dashboard\templates\buyer\devices_buyer.html:74
+msgid "You haven’t rented any devices yet."
+msgstr "لم تستأجر اي جهاز بعد"
+
+#: .\dashboard\templates\buyer\rating.html:8
+msgid "Rate Device"
+msgstr "قيم الجهاز"
+
+#: .\dashboard\templates\buyer\rating.html:43
+msgid "Rate Your Device"
+msgstr "قيم جهازك"
+
+#: .\dashboard\templates\buyer\rating.html:44
+#: .\dashboard\templates\seller\add_device.html:51
+#: .\rentals\templates\order_summary.html:45
+msgid "Device Image"
+msgstr "صورة الجهاز"
+
+#: .\dashboard\templates\buyer\rating.html:46
+msgid "Write your comment here"
+msgstr "اكتب تعليقك هنا"
+
+#: .\dashboard\templates\buyer\rating.html:47
+msgid "Rating from 1 to 5"
+msgstr "قيم من 1 الى 5"
+
+#: .\dashboard\templates\buyer\rating.html:49
+msgid "Submit Rating"
+msgstr "ارسال التقييم"
+
+#: .\dashboard\templates\buyer\rating.html:73
+msgid "Please fill all fields correctly."
+msgstr "فضلا املئ كل الحقول"
+
+#: .\dashboard\templates\buyer\rating.html:94
+msgid "Thank you! Your rating has been submitted."
+msgstr "شكرا لك! تم ارسال تقييمك"
+
+#: .\dashboard\templates\buyer\rating.html:98
+msgid "An error occurred. Please try again."
+msgstr "حدث خطأ ما. حاول مرة اخرى"
+
+#: .\dashboard\templates\management\DevicesManagement.html:8
+msgid "Devices Management - Manager"
+msgstr "ادارة الاجهزة"
+
+#: .\dashboard\templates\management\DevicesManagement.html:55
+#: .\dashboard\templates\management\Manager.html:41
+msgid "Devices Management"
+msgstr "إدارة الأجهزة"
+
+#: .\dashboard\templates\management\DevicesManagement.html:63
+msgid "Owner"
+msgstr "المالك"
+
+#: .\dashboard\templates\management\DevicesManagement.html:64
+msgid "Price"
+msgstr "السعر"
+
+#: .\dashboard\templates\management\DevicesManagement.html:64
+#: .\dashboard\templates\seller\seller_products.html:70
+#: .\rentals\templates\similar_devices.html:28
+msgid "SAR/day"
+msgstr "ال"
+
+#: .\dashboard\templates\management\DevicesManagement.html:67
+#: .\dashboard\templates\management\UsersManagement.html:71
+#: .\dashboard\templates\seller\seller_products.html:74
+msgid "Delete"
+msgstr "حذف"
+
+#: .\dashboard\templates\management\DevicesManagement.html:72
+#: .\rentals\templates\search_results.html:72
+msgid "No devices found."
+msgstr "لم يتم العثور على أجهزة."
+
+#: .\dashboard\templates\management\Manager.html:16
+msgid ""
+"Manage the entire platform: analyze user sentiment, and moderate users and "
+"devices effectively."
+msgstr "ال"
+
+#: .\dashboard\templates\management\Manager.html:51
+#: .\dashboard\templates\management\UsersManagement.html:58
+msgid "Users Management"
+msgstr "إدارة المستخدمين"
+
+#: .\dashboard\templates\management\Manager.html:85
+msgid "No comments available."
+msgstr "لا توجد تعليقات متاحة."
+
+#: .\dashboard\templates\management\Manager.html:97
+msgid "Positive"
+msgstr "ايجابي"
+
+#: .\dashboard\templates\management\Manager.html:98
+msgid "Negative"
+msgstr "سلبي"
+
+#: .\dashboard\templates\management\Manager.html:99
+msgid "Neutral"
+msgstr "طبيعي"
+
+#: .\dashboard\templates\management\UsersManagement.html:8
+msgid "Users Management - Manager"
+msgstr "ادارة المستخدمين"
+
+#: .\dashboard\templates\management\UsersManagement.html:64
+msgid "User"
+msgstr "المستخدم"
+
+#: .\dashboard\templates\management\UsersManagement.html:68
+msgid "Role:"
+msgstr "نوع المستخدم"
+
+#: .\dashboard\templates\management\UsersManagement.html:76
+msgid "No users found."
+msgstr "لم يتم العثور على مستخدمين."
+
+#: .\dashboard\templates\seller\Seller.html:19
+msgid ""
+"List your electronic devices and start earning through seamless rentals."
+msgstr "ال"
+
+#: .\dashboard\templates\seller\Seller.html:59
+#: .\dashboard\templates\seller\Seller.html:61
+msgid "My Products"
+msgstr "منتجاتي"
+
+#: .\dashboard\templates\seller\Seller.html:83
+#: .\dashboard\templates\seller\Seller.html:85
+#: .\dashboard\templates\seller\add_device.html:84
+msgid "Add Device"
+msgstr "اضافة جهاز"
+
+#: .\dashboard\templates\seller\Seller.html:95
+#: .\dashboard\templates\seller\Seller.html:97
+#: .\dashboard\templates\seller\con_delete_device.html:8
+#: .\dashboard\templates\seller\delete_by_input.html:42
+#: .\dashboard\templates\seller\delete_by_input.html:58
+msgid "Delete Device"
+msgstr "حذف جهاز"
+
+#: .\dashboard\templates\seller\Seller.html:107
+#: .\dashboard\templates\seller\Seller.html:109
+#: .\dashboard\templates\seller\modify_device.html:46
+#: .\dashboard\templates\seller\modify_device.html:87
+#: .\dashboard\templates\seller\modify_device_by_input.html:47
+#: .\dashboard\templates\seller\modify_device_by_input.html:86
+msgid "Modify Device"
+msgstr "تعديل جهاز"
+
+#: .\dashboard\templates\seller\add_device.html:7
+msgid "Add Device - Seller"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\add_device.html:46
+msgid "Add New Device"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\add_device.html:56
+msgid "Device Name"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\add_device.html:57
+msgid "e.g., Hp Computer"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\add_device.html:61
+msgid "Specifications"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\add_device.html:62
+msgid "Enter detailed specifications..."
+msgstr "ال"
+
+#: .\dashboard\templates\seller\add_device.html:66
+msgid "Price (SAR)"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\add_device.html:67
+msgid "e.g., 150"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\add_device.html:71
+#: .\dashboard\templates\seller\modify_device.html:74
+msgid "Category"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\add_device.html:73
+#: .\dashboard\templates\seller\modify_device.html:76
+msgid "Select a Category"
+msgstr "تا"
+
+#: .\dashboard\templates\seller\add_device.html:74
+#: .\dashboard\templates\seller\modify_device.html:77
+#: .\rentals\templates\home.html:31 .\rentals\templates\products.html:38
+msgid "Computers"
+msgstr "كمبيوترات"
+
+#: .\dashboard\templates\seller\add_device.html:75
+#: .\dashboard\templates\seller\modify_device.html:78
+#: .\rentals\templates\home.html:32 .\rentals\templates\products.html:39
+msgid "Televisions"
+msgstr "تلفزيونات"
+
+#: .\dashboard\templates\seller\add_device.html:76
+#: .\dashboard\templates\seller\modify_device.html:79
+#: .\rentals\templates\home.html:33 .\rentals\templates\products.html:40
+msgid "Projectors"
+msgstr "بروجكترات"
+
+#: .\dashboard\templates\seller\add_device.html:77
+#: .\dashboard\templates\seller\modify_device.html:80
+#: .\rentals\templates\home.html:34 .\rentals\templates\products.html:41
+msgid "Printers"
+msgstr "طابعات"
+
+#: .\dashboard\templates\seller\add_device.html:78
+#: .\dashboard\templates\seller\modify_device.html:81
+#: .\rentals\templates\home.html:35 .\rentals\templates\products.html:42
+msgid "Cameras"
+msgstr "كاميرات"
+
+#: .\dashboard\templates\seller\add_device.html:79
+#: .\dashboard\templates\seller\modify_device.html:82
+#: .\rentals\templates\home.html:36 .\rentals\templates\products.html:43
+msgid "Speakers"
+msgstr "سماعات"
+
+#: .\dashboard\templates\seller\con_delete_device.html:14
+#, python-format
+msgid "Are you sure you want to delete \"%(name)s\"?"
+msgstr "هل أنت متأكد أنك تريد حذف \"%(name)s\"؟"
+
+#: .\dashboard\templates\seller\con_delete_device.html:17
+msgid "Yes, Delete"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\con_delete_device.html:18
+msgid "Cancel"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\delete_by_input.html:8
+msgid "Delete Device - Seller"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\delete_by_input.html:53
+#: .\dashboard\templates\seller\modify_device_by_input.html:60
+msgid "Device ID or Name"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\delete_by_input.html:54
+#: .\dashboard\templates\seller\modify_device_by_input.html:61
+msgid "Enter Device Name or ID"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\modify_device.html:8
+#: .\dashboard\templates\seller\modify_device_by_input.html:8
+msgid "Modify Device - Seller"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\modify_device.html:52
+msgid "Current Image"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\modify_device.html:54
+msgid "New Image (optional)"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\modify_device.html:59
+#: .\dashboard\templates\seller\modify_device_by_input.html:71
+msgid "New Device Name"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\modify_device.html:64
+#: .\dashboard\templates\seller\modify_device_by_input.html:76
+msgid "New Specifications"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\modify_device.html:69
+#: .\dashboard\templates\seller\modify_device_by_input.html:81
+msgid "New Price (SAR)"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\modify_device_by_input.html:66
+msgid "New Device Image (optional)"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\modify_device_by_input.html:72
+#: .\dashboard\templates\seller\modify_device_by_input.html:77
+#: .\dashboard\templates\seller\modify_device_by_input.html:82
+msgid "Leave blank to keep unchanged"
+msgstr "ال"
+
+#: .\dashboard\templates\seller\seller_products.html:8
+msgid "My Devices - RentTech"
+msgstr "تا"
+
+#: .\dashboard\templates\seller\seller_products.html:60
+msgid "My Devices"
+msgstr "تا"
+
+#: .\dashboard\templates\seller\seller_products.html:70
+msgid "Price:"
+msgstr "تا"
+
+#: .\dashboard\templates\seller\seller_products.html:73
+msgid "Modify"
+msgstr "لا"
+
+#: .\dashboard\templates\seller\seller_products.html:80
+msgid "The buyer marked this device as returned. Confirm?"
+msgstr "تت"
+
+#: .\dashboard\templates\seller\seller_products.html:83
+msgid "Confirm Return"
+msgstr "تت"
+
+#: .\dashboard\templates\seller\seller_products.html:84
+msgid "Reject"
+msgstr "تا"
+
+#: .\dashboard\templates\seller\seller_products.html:88
+msgid "Returned Confirmed"
+msgstr "تا"
+
+#: .\dashboard\templates\seller\seller_products.html:90
+msgid "Return Rejected"
+msgstr "ت"
+
+#: .\dashboard\templates\seller\seller_products.html:97
+msgid "No devices added yet."
+msgstr "فف"
+
+#: .\rentals\templates\category_devices.html:7
+msgid "Devices - RentTech"
+msgstr "اا"
+
+#: .\rentals\templates\category_devices.html:42
+#: .\rentals\templates\search_results.html:7
+#: .\rentals\templates\search_results.html:39
+msgid "Devices"
+msgstr "عع"
+
+#: .\rentals\templates\category_devices.html:43
+msgid "Browse available"
+msgstr "عغ"
+
+#: .\rentals\templates\category_devices.html:43
+msgid "for rent."
+msgstr "ففل"
+
+#: .\rentals\templates\category_devices.html:60
+#: .\rentals\templates\home.html:90
+msgid "Start From:"
+msgstr "تبدأ من"
+
+#: .\rentals\templates\category_devices.html:60
+#: .\rentals\templates\device_detail.html:68
+#: .\rentals\templates\device_detail.html:77 .\rentals\templates\home.html:90
+#: .\rentals\templates\order_summary.html:60
+#: .\rentals\templates\payment.html:61
+msgid "SAR"
+msgstr "تا"
+
+#: .\rentals\templates\category_devices.html:63
+#: .\rentals\templates\search_results.html:63
+msgid "Rent Now"
+msgstr "بب"
+
+#: .\rentals\templates\category_devices.html:70
+msgid "No devices found in this category."
+msgstr "لل"
+
+#: .\rentals\templates\category_devices.html:78
+#: .\rentals\templates\search_results.html:80 .\templates\base.html:110
+msgid "Quick Links"
+msgstr "روابط سريعة"
+
+#: .\rentals\templates\category_devices.html:81
+#: .\rentals\templates\search_results.html:83 .\templates\base.html:113
+msgid "Signup"
+msgstr "انشاء حساب"
+
+#: .\rentals\templates\category_devices.html:82
+#: .\rentals\templates\search_results.html:84 .\templates\base.html:114
+msgid "Help & Support"
+msgstr "الدعم والمساعدة"
+
+#: .\rentals\templates\category_devices.html:85
+#: .\rentals\templates\search_results.html:87 .\templates\base.html:120
+msgid "Contact"
+msgstr "تواصل معنا"
+
+#: .\rentals\templates\device_detail.html:7
+msgid "Device Details | RentTech"
+msgstr "اا"
+
+#: .\rentals\templates\device_detail.html:43
+msgid "Availability:"
+msgstr "اا"
+
+#: .\rentals\templates\device_detail.html:45
+#: .\rentals\templates\order_summary.html:53
+msgid "Available"
+msgstr "اا"
+
+#: .\rentals\templates\device_detail.html:47
+#: .\rentals\templates\order_summary.html:55
+msgid "Unavailable"
+msgstr "اا"
+
+#: .\rentals\templates\device_detail.html:64
+msgid "No ratings yet"
+msgstr "اا"
+
+#: .\rentals\templates\device_detail.html:67
+msgid "Specifications:"
+msgstr "اا"
+
+#: .\rentals\templates\device_detail.html:68
+msgid "Price per day:"
+msgstr "تا"
+
+#: .\rentals\templates\device_detail.html:72
+msgid "Rental Duration (days):"
+msgstr "تت"
+
+#: .\rentals\templates\device_detail.html:77
+msgid "Total Price:"
+msgstr "تت"
+
+#: .\rentals\templates\device_detail.html:82
+msgid "Confirm Rental"
+msgstr "تت"
+
+#: .\rentals\templates\device_detail.html:86
+msgid "This device is currently rented out."
+msgstr "تت"
+
+#: .\rentals\templates\device_detail.html:89
+msgid "Enter your email for notification"
+msgstr "اا"
+
+#: .\rentals\templates\device_detail.html:90
+msgid "Notify Me"
+msgstr "تتت"
+
+#: .\rentals\templates\device_detail.html:94
+msgid "View Similar Available Devices"
+msgstr "ىات"
+
+#: .\rentals\templates\device_detail.html:102
+msgid "User Reviews"
+msgstr "مراجعات المستخدمين"
+
+#: .\rentals\templates\device_detail.html:120
+msgid "No reviews yet."
+msgstr "لا توجد مراجعات بعد."
+
+#: .\rentals\templates\home.html:23 .\rentals\templates\products.html:30
+msgid "Product keyword"
+msgstr "كلمة مفتاحية للمنتج"
+
+#: .\rentals\templates\home.html:30 .\rentals\templates\products.html:37
+msgid "Categories"
+msgstr "التصنيف"
+
+#: .\rentals\templates\home.html:42 .\rentals\templates\products.html:50
+msgid "Search"
+msgstr "ابحث"
+
+#: .\rentals\templates\home.html:62
+msgid "Latest Products"
+msgstr "احدث المنتجات"
+
+#: .\rentals\templates\home.html:63
+msgid ""
+"Browse our latest collection of electronic devices available for rent at the "
+"best prices. Get the technology you need, when you need it."
+msgstr "ت"
+
+#: .\rentals\templates\home.html:86
+msgid "Added:"
+msgstr "ت"
+
+#: .\rentals\templates\home.html:97
+msgid "No products available at the moment."
+msgstr "لا توجد منتجات متاحة حاليًا."
+
+#: .\rentals\templates\home.html:111
+msgid "How it Works"
+msgstr "كيف يعمل؟"
+
+#: .\rentals\templates\home.html:119
+msgid "Create Account"
+msgstr "انشئ حساب"
+
+#: .\rentals\templates\home.html:125
+msgid "Choose Device"
+msgstr "اختر الجهاز"
+
+#: .\rentals\templates\home.html:131
+msgid "Confirm & Receive"
+msgstr "تأكيد واستلام"
+
+#: .\rentals\templates\order_summary.html:8
+msgid "Order Summary - RentTech"
+msgstr "معلومات الطلب"
+
+#: .\rentals\templates\order_summary.html:43
+msgid "Order Confirmed ✅"
+msgstr "تم تأكيد الطلب"
+
+#: .\rentals\templates\order_summary.html:50
+msgid "Availability"
+msgstr "التوفر"
+
+#: .\rentals\templates\order_summary.html:59
+msgid "Days Rented"
+msgstr "عدد ايام التأجير"
+
+#: .\rentals\templates\order_summary.html:59
+msgid "day(s)"
+msgstr "الايام"
+
+#: .\rentals\templates\order_summary.html:60
+msgid "Total Price"
+msgstr "السعر الاجمالي"
+
+#: .\rentals\templates\order_summary.html:61
+msgid "Payment Method"
+msgstr "طريقة الدفع"
+
+#: .\rentals\templates\order_summary.html:62
+msgid "Location"
+msgstr "الموقع"
+
+#: .\rentals\templates\order_summary.html:67
+msgid "Back to Home"
+msgstr "العودة الى الصفحة الرئيسية"
+
+#: .\rentals\templates\payment.html:7
+msgid "Payment - RentTech"
+msgstr "الدفع"
+
+#: .\rentals\templates\payment.html:58
+msgid "Complete Your Payment"
+msgstr "اكمل الدفع"
+
+#: .\rentals\templates\payment.html:60
+msgid "Rental Days"
+msgstr "مدة التأجير"
+
+#: .\rentals\templates\payment.html:61
+msgid "Total Amount"
+msgstr "السعر الاجمالي"
+
+#: .\rentals\templates\payment.html:71
+msgid "Choose Payment Method"
+msgstr "اختر طريقة الدفع"
+
+#: .\rentals\templates\payment.html:73
+msgid "Cash"
+msgstr "كاش"
+
+#: .\rentals\templates\payment.html:74
+msgid "Apple Pay"
+msgstr "بطاقة"
+
+#: .\rentals\templates\payment.html:79
+msgid "Choose Your Location on Map"
+msgstr "اختر موقعك"
+
+#: .\rentals\templates\payment.html:81
+msgid "Selected location will appear here"
+msgstr "موقعك"
+
+#: .\rentals\templates\payment.html:85
+msgid "Confirm & Pay"
+msgstr "تأكيد الدفع"
+
+#: .\rentals\templates\payment.html:94
+msgid "Apple Pay Checkout"
+msgstr "تت"
+
+#: .\rentals\templates\payment.html:95
+msgid "Enter your Apple Pay info (mock)"
+msgstr "ادخل معلومات البطاقة"
+
+#: .\rentals\templates\payment.html:96
+msgid "Card Number"
+msgstr "تت"
+
+#: .\rentals\templates\payment.html:97
+msgid "Expiry"
+msgstr "تات"
+
+#: .\rentals\templates\payment.html:98
+msgid "CVV"
+msgstr "اا"
+
+#: .\rentals\templates\payment.html:99
+msgid "Pay"
+msgstr "ادفع"
+
+#: .\rentals\templates\products.html:71
+msgid "Products Categories"
+msgstr "تصنيف الاجهزة"
+
+#: .\rentals\templates\products.html:73
+msgid ""
+"Browse our collection of electronic devices available for rent at the best "
+"prices. Get the technology you need, when you need it."
+msgstr "تت"
+
+#: .\rentals\templates\search_results.html:40
+#, python-format
+msgid "Browse available %(category_lower)s for rent."
+msgstr "الأجهزة المتاحة للإيجار في %(category_lower)s"
+
+#: .\rentals\templates\search_results.html:60
+msgid "Start From"
+msgstr "تبدأ من"
+
+#: .\rentals\templates\search_results.html:89 .\templates\base.html:122
+msgid "Tel."
+msgstr "رقم الهاتف"
+
+#: .\rentals\templates\search_results.html:89 .\templates\base.html:122
+msgid "Mail."
+msgstr "البريد الالكتروني"
+
+#: .\rentals\templates\similar_devices.html:7
+msgid "Available Devices"
+msgstr "الاجهزة المتوفرة"
+
+#: .\rentals\templates\similar_devices.html:15
+#, python-format
+msgid "Available Devices in %(category)s"
+msgstr "الأجهزة المتوفرة في %(category)s"
+
+#: .\rentals\templates\similar_devices.html:31
+msgid "View Device"
+msgstr "عرض الجهاز"
+
+#: .\rentals\templates\similar_devices.html:39
+msgid "No available devices in this category at the moment."
+msgstr "لا توجد أجهزة متاحة في هذا التصنيف حاليًا."
+
+#: .\templates\base.html:9
+msgid "RentTech"
+msgstr "تت"
+
+#: .\templates\base.html:56
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+#: .\templates\base.html:60
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: .\templates\base.html:96
+msgid "Close"
+msgstr "اغلاق"
+
+#: .\templates\base.html:140
+msgid "Designed and Developed by"
+msgstr "مصمم ومطور من قبل"
+
+#: .\templates\unauthorized.html:7 .\templates\unauthorized.html:39
+msgid "Access Denied"
+msgstr "تم رفض الوصول"
+
+#: .\templates\unauthorized.html:41
+msgid "Go to Login"
+msgstr "الذهاب لتسجيل الدخول"
+

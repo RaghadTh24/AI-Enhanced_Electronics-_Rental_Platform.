@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<!-- Start Hero Area -->
+<section class="hero-area overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                <div class="hero-text text-center">
+                    <div class="section-heading">
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">{% trans "Welcome to RentTech" %}</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".5s">{% trans "Smart Electronic Device Rental Platform" %}<br>{% trans "Rent the devices you need easily at the best prices." %}</p>
+                    </div>
+                    <!-- Start Search Form -->
+                    <form method="GET" action="{% url 'rentals:search' %}">
+                        <div class="search-form wow fadeInUp" data-wow-delay=".7s">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 col-md-4 col-12 p-0">
+                                    <div class="search-input">
+                                        <label for="keyword"><i class="lni lni-search-alt theme-color"></i></label>
+                                        <input type="text" name="keyword" id="keyword" placeholder="{% trans 'Product keyword' %}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-12 p-0">
+                                    <div class="search-input">
+                                        <label for="category"><i class="lni lni-grid-alt theme-color"></i></label>
+                                        <select name="category" id="category">
+                                            <option value="" selected disabled>{% trans "Categories" %}</option>
+                                            <option value="computers">{% trans "Computers" %}</option>
+                                            <option value="televisions">{% trans "Televisions" %}</option>
+                                            <option value="projectors">{% trans "Projectors" %}</option>
+                                            <option value="printers">{% trans "Printers" %}</option>
+                                            <option value="cameras">{% trans "Cameras" %}</option>
+                                            <option value="speakers">{% trans "Speakers" %}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-12 p-0">
+                                    <div class="search-btn button">
+                                        <button type="submit" class="btn"><i class="lni lni-search-alt"></i> {% trans "Search" %}</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End Search Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Hero Area -->
+
+<!-- Start Items Grid Area -->
+<section class="items-grid section custom-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">{% trans "Latest Products" %}</h2>
+                    <p class="wow fadeInUp" data-wow-delay=".6s">{% trans "Browse our latest collection of electronic devices available for rent at the best prices. Get the technology you need, when you need it." %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="single-head">
+            <div class="row">
+                {% for device in latest_devices %}
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-grid wow fadeInUp" data-wow-delay=".{{ forloop.counter }}s">
+                        <div class="image">
+                            <a href="{% url 'rentals:device_detail' device.id %}" class="thumbnail">
+                                <img src="{{ device.image.url }}" alt="{{ device.name }}">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <div class="top-content">
+                                <a href="{% url 'rentals:category_devices' device.category %}" class="tag">
+                                    {{ device.category|title }}
+                                </a>
+                                <h3 class="title">
+                                    <a href="{% url 'rentals:device_detail' device.id %}">{{ device.name }}</a>
+                                </h3>
+                                <p class="update-time">
+                                    {% trans "Added:" %} {{ device.created_at|date:"M d, Y" }}
+                                </p>
+                            </div>
+                            <div class="bottom-content">
+                                <p class="price">{% trans "Start From:" %} <span>{{ device.price_per_day }} {% trans "SAR" %}</span></p>
+                                <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <p class="text-center">{% trans "No products available at the moment." %}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /End Items Grid Area -->
+
+<!-- Start How Works Area -->
+<section class="how-works section" style="background-color: #fff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">{% trans "How it Works" %}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="single-work wow fadeInUp" data-wow-delay=".2s">
+                    <span class="serial">01</span>
+                    <h3>{% trans "Create Account" %}</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="single-work wow fadeInUp" data-wow-delay=".4s">
+                    <span class="serial">02</span>
+                    <h3>{% trans "Choose Device" %}</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="single-work wow fadeInUp" data-wow-delay=".6s">
+                    <span class="serial">03</span>
+                    <h3>{% trans "Confirm & Receive" %}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End How Works Area -->
+
+{% endblock content %}

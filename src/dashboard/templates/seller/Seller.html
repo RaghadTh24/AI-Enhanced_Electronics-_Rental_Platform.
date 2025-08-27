@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<!-- End Header Area -->
+
+<!-- Start Hero Area -->
+<section class="hero-area overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                <div class="hero-text text-center">
+                    <!-- Start Hero Text -->
+                    <div class="section-heading">
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">{% trans "Welcome to RentTech" %}</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".5s">
+                            {% trans "List your electronic devices and start earning through seamless rentals." %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Hero Area -->
+
+<!-- Start Items Grid Area -->
+<section class="items-grid section custom-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">{% trans "Your Service" %}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center">
+            <div class="row justify-content-center g-4">
+
+                <!-- My Profile -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <a href="{% url 'accounts:profile' %}" class="text-decoration-none">
+                        <div class="service-box p-4 pt-0">
+                            <div class="service-img mb-3">
+                                <img src="{% static 'img/Profile.jpg' %}" class="img-fluid rounded" alt="{% trans 'Profile' %}">
+                            </div>
+                            <h4 class="service-title">{% trans "My Profile" %}</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- My Products -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <a href="{% url 'dashboard:seller_products' %}" class="text-decoration-none">
+                        <div class="service-box p-4 pt-0">
+                            <div class="service-img mb-3">
+                                <img src="{% static 'img/Devices.jpg' %}" class="img-fluid rounded" alt="{% trans 'My Products' %}">
+                            </div>
+                            <h4 class="service-title">{% trans "My Products" %}</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Chatbot -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <a href="{% url 'chatbot:chatbot_page' %}" class="text-decoration-none">
+                        <div class="service-box p-4 pt-0">
+                            <div class="service-img mb-3">
+                                <img src="{% static 'img/Chatbot.jpg' %}" class="img-fluid rounded" alt="{% trans 'Chatbot' %}">
+                            </div>
+                            <h4 class="service-title">{% trans "Communicate with chatbot" %}</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Add Device -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <a href="{% url 'dashboard:add_device' %}" class="text-decoration-none">
+                        <div class="service-box p-4 pt-0">
+                            <div class="service-img mb-3">
+                                <img src="{% static 'img/ModifyD.jpg' %}" class="img-fluid rounded" alt="{% trans 'Add Device' %}">
+                            </div>
+                            <h4 class="service-title">{% trans "Add Device" %}</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Delete Device -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <a href="{% url 'dashboard:delete_device_by_input' %}" class="text-decoration-none">
+                        <div class="service-box p-4 pt-0">
+                            <div class="service-img mb-3">
+                                <img src="{% static 'img/DeleteD.jpg' %}" class="img-fluid rounded" alt="{% trans 'Delete Device' %}">
+                            </div>
+                            <h4 class="service-title">{% trans "Delete Device" %}</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Modify Device -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <a href="{% url 'dashboard:modify_device_by_input' %}" class="text-decoration-none">
+                        <div class="service-box p-4 pt-0">
+                            <div class="service-img mb-3">
+                                <img src="{% static 'img/ModifyD.jpg' %}" class="img-fluid rounded" alt="{% trans 'Modify Device' %}">
+                            </div>
+                            <h4 class="service-title">{% trans "Modify Device" %}</h4>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services End -->
+
+{% endblock content %}

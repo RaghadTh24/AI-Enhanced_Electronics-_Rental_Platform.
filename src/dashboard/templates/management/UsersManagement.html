@@ -1,0 +1,83 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% trans "Users Management - Manager" %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'logo.jpg' %}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #b49782, #d6c4b5);
+    }
+    .wrapper {
+      background-color: white;
+      border-radius: 10px;
+      padding: 40px;
+      max-width: 1000px;
+      margin: 50px auto;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+    .user-card {
+      background-color: #f8f8f8;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .user-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .btn-brown {
+      background-color: #826950;
+      color: white;
+      font-weight: bold;
+      border: none;
+    }
+    .btn-brown:hover {
+      background-color: #6e5641;
+    }
+    .user-actions a {
+      width: 48%;
+    }
+    .user-info {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <h3 class="text-center mb-4">{% trans "Users Management" %}</h3>
+    <div class="row g-4">
+
+      {% for user in users %}
+        <div class="col-md-4">
+          <div class="user-card text-center">
+            <img src="{% static 'img/Profile.jpg' %}" alt="{% trans 'User' %}" class="user-img">
+            <div class="user-info">
+              <h5>{{ user.get_full_name }}</h5>
+              <p><strong>{% trans "Email:" %}</strong> {{ user.email }}</p>
+              <p><strong>{% trans "Role:" %}</strong> {{ user.role|title }}</p>
+            </div>
+            <div class="user-actions d-flex justify-content-between mt-3">
+              <a href="{% url 'dashboard:delete_user' user.id %}" class="btn btn-brown">{% trans "Delete" %}</a>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p>{% trans "No users found." %}</p>
+      {% endfor %}
+
+    </div>
+  </div>
+
+</body>
+</html>

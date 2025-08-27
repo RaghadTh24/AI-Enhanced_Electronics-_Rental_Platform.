@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<!-- Start Hero Area -->
+<section class="hero-area overlay">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+        <div class="hero-text text-center">
+          <div class="section-heading">
+            <h2 class="wow fadeInUp" data-wow-delay=".3s">{% trans "Welcome to RentTech" %}</h2>
+            <p class="wow fadeInUp" data-wow-delay=".5s">
+              {% trans "Smart Electronic Device Rental Platform" %} <br>
+              {% trans "Rent the devices you need easily at the best prices." %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Hero Area -->
+
+<!-- Start Items Grid Area -->
+<section class="items-grid section custom-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2 class="wow fadeInUp" data-wow-delay=".4s">{% trans "Privacy Policy" %}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="content mt-4" style="margin-top: 30px; line-height: 2; color:black;">
+      <h4>{% trans "Information We Collect" %}</h4>
+      <p>{% trans "We may collect personal information such as your name, email address, contact number, and payment details when you register or make a transaction." %}</p>
+
+      <h4>{% trans "How We Use Your Information" %}</h4>
+      <p>{% trans "Your information is used to provide and improve our services, process transactions, and communicate with you regarding updates or promotional content." %}</p>
+
+      <h4>{% trans "Data Security" %}</h4>
+      <p>{% trans "We implement a variety of security measures to maintain the safety of your personal information." %}</p>
+
+      <h4>{% trans "Cookies" %}</h4>
+      <p>{% trans "We use cookies to personalize your experience and analyze website traffic. You can choose to disable cookies through your browser settings." %}</p>
+
+      <h4>{% trans "Third-Party Sharing" %}</h4>
+      <p>{% trans "We do not sell, trade, or otherwise transfer your personal information to outside parties without your consent, except when necessary to fulfill our services." %}</p>
+
+      <h4>{% trans "Your Rights" %}</h4>
+      <p>{% trans "You have the right to access, correct, or delete your personal data. You can contact us to exercise any of these rights." %}</p>
+
+      <h4>{% trans "Contact Us" %}</h4>
+      <p>{% trans "If you have any questions about this Privacy Policy, you can contact us at support@renttech.com." %}</p>
+    </div>
+  </div>
+</section>
+<!-- End Privacy Policy Area -->
+
+{% endblock content %}

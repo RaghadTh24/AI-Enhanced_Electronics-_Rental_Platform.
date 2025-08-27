@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot - RentTech</title>
+  <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #826950, #ffffff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .back-button a {
+      background-color: #5c4d3d;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .back-button a:hover {
+      background-color: #826950;
+    }
+
+    .chat-container {
+      background: #fff;
+      max-width: 600px;
+      width: 100%;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .chat-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      position: relative;
+      text-align: center;
+    }
+
+    .chat-title::before {
+      content: '';
+      position: absolute;
+      height: 4px;
+      width: 35px;
+      background: linear-gradient(135deg, #ae9c6f, #ffffff);
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%);
+      border-radius: 5px;
+    }
+
+    .chat-box {
+      height: 350px;
+      overflow-y: auto;
+      border: 1px solid #eee;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #fafafa;
+      margin-bottom: 15px;
+    }
+
+    .user-msg,
+    .bot-msg {
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      max-width: 75%;
+      word-wrap: break-word;
+    }
+
+    .user-msg {
+      background: #f0e7dc;
+      color: #333;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .bot-msg {
+      background: #e9e4d4;
+      color: #333;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    #user-input {
+      flex: 1;
+      height: 45px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      outline: none;
+    }
+
+    button {
+      background: #ae9c6f;
+      border: none;
+      color: white;
+      padding: 0 20px;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #826950;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 600px) {
+      .chat-container {
+        padding: 20px;
+      }
+
+      .chat-box {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="{% url 'rentals:home' %}" class="btn btn-brown px-5 py-2">Back</a>
+  </div>
+
+  <!-- Chat Container -->
+  <div class="chat-container">
+    <div class="chat-title">RentTech Chatbot</div>
+    <div class="chat-box" id="chat-box">
+      <div class="bot-msg">Welcome to RENTTECH! How can I assist you today?</div>
+    </div>
+    <form id="chat-form">
+      <div class="input-group">
+        <input type="text" id="user-input" placeholder="Type your message..." required />
+        <button type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const chatBox = document.getElementById('chat-box');
+    const chatForm = document.getElementById('chat-form');
+    const userInput = document.getElementById('user-input');
+    let conversationId = null;
+
+    chatForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const message = userInput.value.trim();
+      if (!message) return;
+
+      appendMessage('user', message);
+      userInput.value = '';
+
+      try {
+        const response = await fetch('/chatbot/chat/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            message: message,
+            conversation_id: conversationId
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(`Server error: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (data?.response) {
+          appendTypingMessage('bot', data.response);
+        }
+
+        if (data?.conversation_id) {
+          conversationId = data.conversation_id;
+        }
+
+      } catch (error) {
+        appendMessage('bot', 'Sorry, something went wrong. Please try again later.');
+        console.error(error);
+      }
+    });
+
+    function appendMessage(sender, message) {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add(sender === 'user' ? 'user-msg' : 'bot-msg');
+      messageDiv.innerText = message;
+      chatBox.appendChild(messageDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function appendTypingMessage(sender, fullMessage, speed = 25) {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add(sender === 'user' ? 'user-msg' : 'bot-msg');
+      chatBox.appendChild(messageDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+
+      let i = 0;
+      function type() {
+        if (i < fullMessage.length) {
+          messageDiv.innerHTML += fullMessage.charAt(i);
+          i++;
+          chatBox.scrollTop = chatBox.scrollHeight;
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    }
+  </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<!-- Start Hero Area -->
+<section class="hero-area overlay">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+        <div class="hero-text text-center">
+          <div class="section-heading">
+            <h2 class="wow fadeInUp" data-wow-delay=".3s">{% trans "Welcome to RentTech" %}</h2>
+            <p class="wow fadeInUp" data-wow-delay=".5s">
+              {% trans "Manage the entire platform: analyze user sentiment, and moderate users and devices effectively." %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Hero Area -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- خدمات المدير -->
+<section class="items-grid section custom-padding">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>{% trans "Your Service" %}</h2>
+    </div>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <a href="{% url 'dashboard:manage_devices' %}" class="text-decoration-none">
+          <div class="service-box p-4 pt-0">
+            <div class="service-img mb-3">
+              <img src="{% static 'img/Devices.jpg' %}" class="img-fluid rounded" alt="DevicesManagement">
+            </div>
+            <h4 class="service-title">{% trans "Devices Management" %}</h4>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <a href="{% url 'dashboard:manage_users' %}" class="text-decoration-none">
+          <div class="service-box p-4 pt-0">
+            <div class="service-img mb-3">
+              <img src="{% static 'img/Profile.jpg' %}" class="img-fluid rounded" alt="UsersManagement">
+            </div>
+            <h4 class="service-title">{% trans "Users Management" %}</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="items-grid section custom-padding">
+  <div class="container">
+    {% for category, devices in categorized_devices.items %}
+      <div class="category-block my-5">
+        <h3 class="text-center text-uppercase mb-4">{{ category }}</h3>
+
+        {% for device in devices %}
+          <div class="device-analysis mb-5">
+            <h5 class="text-primary text-center">{{ device.name }}</h5>
+
+            <div class="text-center mb-3" style="max-width: 400px; margin: 0 auto;">
+              <canvas id="chart-{{ forloop.parentloop.counter }}-{{ forloop.counter }}"></canvas>
+            </div>
+
+            <ul class="list-group col-md-8 offset-md-2">
+              {% for comment in device.comments %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  {{ comment.comment }}
+                  <span class="badge 
+                    {% if comment.sentiment == "Positive" %}bg-success
+                    {% elif comment.sentiment == "Negative" %}bg-danger
+                    {% else %}bg-warning text-dark{% endif %}">
+                    {{ comment.sentiment }}
+                  </span>
+                </li>
+              {% empty %}
+                <li class="list-group-item text-muted text-center">{% trans "No comments available." %}</li>
+              {% endfor %}
+            </ul>
+
+            <script>
+              const ctx_{{ forloop.parentloop.counter }}_{{ forloop.counter }} =
+                document.getElementById("chart-{{ forloop.parentloop.counter }}-{{ forloop.counter }}").getContext("2d");
+
+              new Chart(ctx_{{ forloop.parentloop.counter }}_{{ forloop.counter }}, {
+                type: "pie",
+                data: {
+                  labels: [
+                    "{% trans 'Positive' %} ({{ device.sentiments.positive }})",
+                    "{% trans 'Negative' %} ({{ device.sentiments.negative }})",
+                    "{% trans 'Neutral' %} ({{ device.sentiments.neutral }})"
+                  ],
+                  datasets: [{
+                    data: [
+                      {{ device.sentiments.positive }},
+                      {{ device.sentiments.negative }},
+                      {{ device.sentiments.neutral }}
+                    ],
+                    backgroundColor: ["#4CAF50", "#F44336", "#FFC107"]
+                  }]
+                },
+                options: {
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  plugins: {
+                    legend: {
+                      position: "bottom"
+                    }
+                  }
+                }
+              });
+            </script>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock content %}

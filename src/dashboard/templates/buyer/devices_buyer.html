@@ -1,0 +1,82 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>{% trans "My Rentals" %} | RentTech</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #b49782, #d6c4b5);
+    }
+    .wrapper {
+      background-color: white;
+      border-radius: 10px;
+      padding: 40px;
+      max-width: 1000px;
+      margin: 50px auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .service-box:hover {
+      transform: scale(1.05);
+    }
+    .service-img img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+    }
+    .rating-box a {
+      background-color: #826950;
+      color: white;
+      padding: 8px 20px;
+      display: inline-block;
+      border-radius: 6px;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <h3 class="mb-4">{% trans "Devices You Rented" %}</h3>
+    <div class="row justify-content-center g-4">
+
+      {% for rental in rentals %}
+      <div class="col-md-4">
+        <div class="service-box">
+          <div class="service-img mb-3">
+            <img src="{{ rental.device.image.url }}" alt="{{ rental.device.name }}">
+          </div>
+          <h5>{{ rental.device.name }}</h5>
+          <p class="text-muted">{% trans "From" %} {{ rental.start_date }} {% trans "to" %} {{ rental.end_date }}</p>
+          <div class="rating-box">
+            <a href="{% url 'dashboard:rate_device' rental.device.id %}">{% trans "Rating" %}</a>
+          </div>
+          <form method="post" action="{% url 'rentals:return_device' rental.id %}">
+            {% csrf_token %}
+            {% if rental.status != "returned" and not rental.buyer_returned %}
+              <button class="btn btn-danger btn-sm">{% trans "Mark as Returned" %}</button>
+            {% elif rental.buyer_returned and rental.seller_confirmed == None %}
+              <span class="badge bg-warning">{% trans "Waiting for seller confirmation" %}</span>
+            {% elif rental.seller_confirmed %}
+              <span class="badge bg-success">{% trans "Returned" %}</span>
+            {% else %}
+              <span class="badge bg-danger">{% trans "Rejected" %}</span>
+            {% endif %}
+          </form>
+        </div>
+      </div>
+      {% empty %}
+        <p class="text-muted">{% trans "You haven’t rented any devices yet." %}</p>
+      {% endfor %}
+
+    </div>
+  </div>
+
+</body>
+</html>
+{% comment %} {% url 'dashboard:rate_device' rental.device.id %} {% endcomment %}

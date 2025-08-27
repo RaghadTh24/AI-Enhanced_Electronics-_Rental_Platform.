@@ -1,0 +1,148 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Device Details | RentTech</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .device-image {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+        .price-box {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .review-box {
+        border-left: 4px solid #5e4633 !important;
+        border-radius: 8px !important;
+        }
+        
+    </style>
+</head>
+<body>
+{% if error_message %}
+  <div class="alert alert-danger text-center">
+    {{ error_message }}
+  </div>
+{% endif %}
+
+<div class="container py-5">
+    <div class="row">
+        <!-- صورة الجهاز -->
+        <div class="col-md-6">
+            <img src="{{ device.image.url }}" class="device-image" alt="{{ device.name }}">
+        </div>
+
+        <!-- تفاصيل الجهاز -->
+        <div class="col-md-6">
+            <h2>{{ device.name }}</h2>
+           <p><strong>Availability:</strong> 
+                {% if device.is_available %}
+                    Available
+                {% else %}
+                    Unavailable
+                {% endif %}
+            </p>
+            {% if device.average_rating %}
+            <div class="text-warning mb-2">
+                {% for i in "12345" %}
+                {% if forloop.counter <= device.average_rating %}
+                    <i class="fa fa-star"></i>
+                {% elif device.average_rating|floatformat:1 >= forloop.counter0|add:"0.5" %}
+                    <i class="fa fa-star-half-alt"></i>
+                {% else %}
+                    <i class="fa fa-star text-muted"></i>
+                {% endif %}
+                {% endfor %}
+                <small class="text-dark">({{ device.average_rating }})</small>
+            </div>
+            {% else %}
+            <div class="text-muted mb-2">No ratings yet</div>
+            {% endif %}
+            <p><strong>Specifications:</strong> {{ device.specs }}</p>
+            <p class="price-box">Price per day: {{ device.price_per_day }} SAR</p>
+
+            <!-- مدة الإيجار -->
+            <div class="mb-3">
+                <label for="days">Rental Duration (days):</label>
+                <input type="number" id="days" class="form-control" min="1" value="1">
+            </div>
+
+            <!-- السعر النهائي -->
+            <p>Total Price: <span id="totalPrice">{{ device.price_per_day }}</span> SAR</p>
+
+            <!-- زر التأكيد -->
+            <form method="GET" action="{% url 'rentals:payment' device.id %}">
+                <input type="hidden" name="rental_days" id="daysField" value="1">
+                <button type="submit" class="btn btn-primary">Confirm Rental</button>
+            </form>
+            {% if is_currently_rented %}
+              <div class="alert alert-warning mt-4">This device is currently rented out.</div>
+              <form method="post" class="mt-2">
+                {% csrf_token %}
+                <input type="email" name="notify_email" class="form-control" placeholder="Enter your email for notification" required>
+                <button type="submit" class="btn btn-sm btn-primary mt-2">Notify Me</button>
+              </form>
+              <div class="mt-5 text-center">
+
+              <a href="{% url 'rentals:available_devices' device.category %}?exclude={{ device.id }}" class="btn btn-outline-secondary mt-3">
+                View Similar Available Devices
+              </a>
+
+
+              </div>
+            {% endif %}
+
+
+
+
+
+
+        </div>
+    </div>
+<div class="mt-5">
+  <h4>User Reviews</h4>
+  {% if ratings %}
+    {% for rating in ratings %}
+      <div class="border rounded p-3 mb-3 bg-light review-box" >
+        <strong>{{ rating.user.username }}</strong>
+        
+        <div class="text-warning">
+          {% for i in "12345" %}
+            {% if forloop.counter <= rating.stars %}
+              <i class="fa fa-star"></i>
+            {% else %}
+              <i class="fa fa-star text-muted"></i>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <p class="mb-1 text-muted">{{ rating.comment }}</p>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p class="text-muted">No reviews yet.</p>
+  {% endif %}
+</div>
+
+</div>
+
+<script>
+    const pricePerDay = {{ device.price_per_day }};
+    const daysInput = document.getElementById("days");
+    const totalEl = document.getElementById("totalPrice");
+    const daysField = document.getElementById("daysField");
+
+    daysInput.addEventListener("input", () => {
+        const days = parseInt(daysInput.value) || 1;
+        totalEl.textContent = days * pricePerDay;
+        daysField.value = days;
+    });
+</script>
+
+</body>
+</html>

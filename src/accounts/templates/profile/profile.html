@@ -1,0 +1,62 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>{% trans "RentTech - Profile" %}</title>
+  <link rel="stylesheet" href="{% static 'css/profilec.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="bgimage">
+    <div class="menu">
+      <div class="rightmenu">
+        <ul>
+          <li><a href="{% url 'rentals:home' %}">{% trans "Home" %}</a></li>
+          <li><a href="{% url 'rentals:products' %}">{% trans "Products" %}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="card">
+        <table>
+          <tbody>
+            <tr>
+              <td>{% trans "Full Name:" %}</td>
+              <td>{{ user.get_full_name }}</td>
+            </tr>
+            <tr>
+              <td>{% trans "Username:" %}</td>
+              <td>{{ user.username }}</td>
+            </tr>
+            <tr>
+              <td>{% trans "Email:" %}</td>
+              <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+              <td>{% trans "Phone Number:" %}</td>
+              <td>{{ user.phone }}</td>
+            </tr>
+            <tr>
+              <td>{% trans "ID Type:" %}</td>
+              <td>{{ user.id_type }}</td>
+            </tr>
+            <tr>
+              <td>{% trans "ID Number:" %}</td>
+              <td>{{ user.id_number }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="edit-button-container">
+          <a href="{% url 'accounts:edit_profile' %}" class="edit-btn">{% trans "Edit" %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

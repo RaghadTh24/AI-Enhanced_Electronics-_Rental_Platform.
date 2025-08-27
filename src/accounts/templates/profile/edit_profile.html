@@ -1,0 +1,67 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>{% trans "RentTech - Edit Profile" %}</title>
+  <link rel="stylesheet" href="{% static 'css/signc.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <div class="title">{% trans "Edit Profile" %}</div>
+    <div class="content">
+      <form method="POST" action="{% url 'accounts:edit_profile' %}">
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">{% trans "Username" %}</span>
+            {{ form.username }}
+            {{ form.username.errors }}
+          </div>
+          <div class="input-box">
+            <span class="details">{% trans "First Name" %}</span>
+            {{ form.first_name }}
+            {{ form.first_name.errors }}
+          </div>
+          <div class="input-box">
+            <span class="details">{% trans "Last Name" %}</span>
+            {{ form.last_name }}
+            {{ form.last_name.errors }}
+          </div>
+          <div class="input-box">
+            <span class="details">{% trans "Email" %}</span>
+            {{ form.email }}
+            {{ form.email.errors }}
+          </div>
+          <div class="input-box">
+            <span class="details">{% trans "Phone Number" %}</span>
+            {{ form.phone }}
+            {{ form.phone.errors }}
+          </div>
+          <div class="input-box">
+            <span class="details">{% trans "ID Type" %}</span>
+            {{ form.id_type }}
+            {{ form.id_type.errors }}
+          </div>
+          <div class="input-box">
+            <span class="details">{% trans "ID Number" %}</span>
+            {{ form.id_number }}
+            {{ form.id_number.errors }}
+          </div>
+          <div class="input-box">
+            <span class="details">{% trans "Gender" %}</span>
+            {{ form.gender }}
+            {{ form.gender.errors }}
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="{% trans 'Save Changes' %}">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
